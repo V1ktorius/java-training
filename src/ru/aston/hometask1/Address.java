@@ -1,6 +1,5 @@
-package Task1;
+package ru.aston.hometask1;
 
-// изменяемый класс
 public class Address {
     private String region;
     private String settlement;
@@ -8,7 +7,7 @@ public class Address {
     private int house;
     private int flat;
 
-    Address(String region, String settlement, String street, int house, int flat) {
+    public Address(String region, String settlement, String street, int house, int flat) {
         this.region = region;
         this.settlement = settlement;
         this.street = street;

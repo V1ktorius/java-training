@@ -1,17 +1,16 @@
-package Task1;
+package ru.aston.hometask1;
 
-// неизменяемый класс с полем изменяемого класса
-final class Cargo {
-    final int length;
-    final int width;
-    final int height;
+public final class Cargo {
+    private final int length;
+    private final int width;
+    private final int height;
     private final Address destination;
 
-    Cargo(int length, int width, int height, Address address) {
+    public Cargo(int length, int width, int height, Address address) {
         this.length = length;
         this.width = width;
         this.height = height;
-        this.destination = address;
+        this.destination = address.copy();
     }
 
     public int getLength() {
