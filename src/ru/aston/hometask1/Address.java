@@ -1,6 +1,6 @@
 package ru.aston.hometask1;
 
-public class Address {
+public class Address implements Cloneable {
     private String region;
     private String settlement;
     private String street;
@@ -15,44 +15,45 @@ public class Address {
         this.flat = flat;
     }
 
-    protected String getRegion() {
+    public String getRegion() {
         return region;
     }
-    protected String getSettlement() {
+    public String getSettlement() {
         return settlement;
     }
-    protected String getStreet() {
+    public String getStreet() {
         return street;
     }
-    protected int getHouse() {
+    public int getHouse() {
         return house;
     }
-    protected int getFlat() {
+    public int getFlat() {
         return flat;
     }
 
-    protected Address setRegion(String region) {
+    public Address setRegion(String region) {
         this.region = region;
         return this;
     }
-    protected Address setSettlement(String settlement) {
+    public Address setSettlement(String settlement) {
         this.settlement = settlement;
         return this;
     }
-    protected Address setStreet(String street) {
+    public Address setStreet(String street) {
         this.street = street;
         return this;
     }
-    protected Address setHouse(int house) {
+    public Address setHouse(int house) {
         this.house = house;
         return this;
     }
-    protected Address setFlat(int flat) {
+    public Address setFlat(int flat) {
         this.flat = flat;
         return this;
     }
 
-    protected Address copy() {
+    @Override
+    public Address clone() {
         return new Address(this.region, this.settlement, this.street, this.house, this.flat);
     }
 

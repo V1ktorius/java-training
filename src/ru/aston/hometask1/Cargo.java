@@ -1,16 +1,22 @@
 package ru.aston.hometask1;
 
+import java.io.IOException;
+
 public final class Cargo {
     private final int length;
     private final int width;
     private final int height;
     private final Address destination;
 
-    public Cargo(int length, int width, int height, Address address) {
+    public Cargo(int length, int width, int height, Address address) throws NullPointerException {
+        if (address != null) {
+            this.destination = address.clone();
+        } else {
+            throw new NullPointerException("Address is undefined");
+        }
         this.length = length;
         this.width = width;
         this.height = height;
-        this.destination = address.copy();
     }
 
     public int getLength() {
@@ -23,7 +29,7 @@ public final class Cargo {
         return height;
     }
     public Address getDestination() {
-        return destination.copy();
+        return destination.clone();
     }
 
     @Override
