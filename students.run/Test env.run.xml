@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test env" type="Application" factoryName="Application">
+    <envs>
+      <env name="STUDENTS_JSON_FILE_PATH" value="src/ru/aston/hometask2/students.json" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="ru.aston.hometask2.Start" />
+    <module name="java-training" />
+    <option name="PASS_PARENT_ENVS" value="false" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
