@@ -11,10 +11,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Start {
     public static void main(String[] args) {
-        String filePath = System.getenv(Student.STUDENTS_JSON_FILE_PATH);
+        String filePath = System.getenv(FileReaderService.STUDENTS_JSON_FILE_PATH);
 
-        List<Student> students = Student.getStudentsFromJsonFile(filePath);
+        List<Student> students = FileReaderService.getStudentsFromJsonFile(filePath);
 
-        Student.streamStudentsIntoConsole(students);
+        StudentService.streamStudentsIntoConsole(students);
     }
 }
